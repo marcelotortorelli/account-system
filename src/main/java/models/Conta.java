@@ -4,11 +4,11 @@ public abstract class Conta {
 
 	private int numero;
 	private int agencia;
-	private Cliente cliente;
+	private String cliente;
 	protected double saldo;
 	private TipoConta tipoConta;
 
-	public Conta(int agencia, Cliente cliente, double saldo, TipoConta tipoConta) {
+	public Conta(int agencia, String cliente, double saldo, TipoConta tipoConta) {
 		this.agencia = agencia;
 		this.cliente = cliente;
 		this.saldo = saldo;
@@ -22,11 +22,11 @@ public abstract class Conta {
 		this.numero = numero;
 	}
 
-	public Cliente getCliente() {
+	public String getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
+	public void setCliente(String cliente) {
 		this.cliente = cliente;
 	}
 

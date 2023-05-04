@@ -4,7 +4,7 @@ public class ContaSalario extends Conta implements Tributavel {
 
 	private int numLimiteSaques;
 
-	public ContaSalario(int agencia, Cliente cliente, double saldo, int numLimiteSaques) {
+	public ContaSalario(int agencia, String cliente, double saldo, int numLimiteSaques) {
 		super(agencia, cliente, saldo, TipoConta.SALARIO);
 		this.numLimiteSaques = numLimiteSaques;
 	}

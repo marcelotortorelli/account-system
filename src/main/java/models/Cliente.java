@@ -1,12 +1,22 @@
 package models;
 
-public class Cliente {
+public class Cliente implements Autenticador{
     private int id;
     private String nome;
+    private boolean status;
+    private String  senha;
+    private int compras;
 
-    public Cliente(String nome){
+    public Cliente(String nome, boolean status, String senha, int compras){
         this.nome = nome;
+        this.status = status;
+        this.senha = senha;
+        this.compras = compras;
 
+    }
+
+    public int getCompras() {
+        return this.compras;
     }
 
     public int getId() {
@@ -14,9 +24,8 @@ public class Cliente {
 
     }
 
-    public void setId(int id) {
-        this.id = id;
-
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getNome() {
@@ -24,11 +33,9 @@ public class Cliente {
 
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-
+    public String getSenha() {
+        return senha;
     }
-
 
     @Override
     public String toString() {
@@ -37,4 +44,20 @@ public class Cliente {
                 ", nome='" + nome + '\'' +
                 '}';
     }
-}
+
+    @Override
+        public boolean autentica(String senha){
+            if (this.senha != senha){
+                System.out.println("Não autenticado.");
+                return false;
+            }
+            else {
+                System.out.println("Autenticado.");
+                return true;
+            }
+        };
+
+
+    }
+
+

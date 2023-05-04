@@ -4,7 +4,7 @@ public class ContaCorrente extends Conta implements Tributavel{
 
 	private double chequeEspecial;
 
-	public ContaCorrente(int agencia, Cliente cliente, double saldo, double chequeEspecial, TipoConta tipoConta) {
+	public ContaCorrente(int agencia, String cliente, double saldo, double chequeEspecial, TipoConta tipoConta) {
 		super(agencia, cliente, saldo, TipoConta.CORRENTE);
 		this.chequeEspecial = chequeEspecial;
 	}

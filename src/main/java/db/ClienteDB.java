@@ -13,7 +13,7 @@ public class ClienteDB {
 
     public void addNovoCliente(Cliente cliente) {
         int id = clienteDBMap.size() + 1;
-        cliente.setId(id); // Atribuindo id do cliente automaticamente conforme o tamanho da lista.
+        //cliente.setId(id); // Atribuindo id do cliente automaticamente conforme o tamanho da lista.
         clienteDBMap.put(cliente.getId(),cliente);
     }
 

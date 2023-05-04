@@ -5,7 +5,7 @@ public class ContaPoupanca extends Conta{
 	private int diaAniversario;
 	private double taxaDeJuros;
 
-	public ContaPoupanca(int agencia, Cliente cliente, double saldo, int diaAniversario, double taxaDeJuros) {
+	public ContaPoupanca(int agencia, String cliente, double saldo, int diaAniversario, double taxaDeJuros) {
 		super(agencia, cliente, saldo, TipoConta.POUPANCA);
 		this.diaAniversario = diaAniversario;
 		this.taxaDeJuros = taxaDeJuros;
