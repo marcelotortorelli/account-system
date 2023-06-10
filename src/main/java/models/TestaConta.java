@@ -16,7 +16,7 @@ public class TestaConta {
 
 		List<ContaCorrente> contas = Arrays.asList(cc1, cc2, cc3);
 
-		contas.forEach(ContaCorrente ::getTipoConta);
+		contas.forEach(ContaCorrente :: getTipoConta);
 
 	}
 }
